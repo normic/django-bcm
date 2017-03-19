@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+from django.conf.urls import url
+from django.views.generic import TemplateView
+
+from . import views
+
+urlpatterns = [
+    url(
+        regex="^Company/~create/$",
+        view=views.CompanyCreateView.as_view(),
+        name='Company_create',
+    ),
+    url(
+        regex="^Company/(?P<pk>\d+)/~delete/$",
+        view=views.CompanyDeleteView.as_view(),
+        name='Company_delete',
+    ),
+    url(
+        regex="^Company/(?P<pk>\d+)/$",
+        view=views.CompanyDetailView.as_view(),
+        name='Company_detail',
+    ),
+    url(
+        regex="^Company/(?P<pk>\d+)/~update/$",
+        view=views.CompanyUpdateView.as_view(),
+        name='Company_update',
+    ),
+    url(
+        regex="^Company/$",
+        view=views.CompanyListView.as_view(),
+        name='Company_list',
+    ),
+	url(
+        regex="^Person/~create/$",
+        view=views.PersonCreateView.as_view(),
+        name='Person_create',
+    ),
+    url(
+        regex="^Person/(?P<pk>\d+)/~delete/$",
+        view=views.PersonDeleteView.as_view(),
+        name='Person_delete',
+    ),
+    url(
+        regex="^Person/(?P<pk>\d+)/$",
+        view=views.PersonDetailView.as_view(),
+        name='Person_detail',
+    ),
+    url(
+        regex="^Person/(?P<pk>\d+)/~update/$",
+        view=views.PersonUpdateView.as_view(),
+        name='Person_update',
+    ),
+    url(
+        regex="^Person/$",
+        view=views.PersonListView.as_view(),
+        name='Person_list',
+    ),
+	url(
+        regex="^Group/~create/$",
+        view=views.GroupCreateView.as_view(),
+        name='Group_create',
+    ),
+    url(
+        regex="^Group/(?P<pk>\d+)/~delete/$",
+        view=views.GroupDeleteView.as_view(),
+        name='Group_delete',
+    ),
+    url(
+        regex="^Group/(?P<pk>\d+)/$",
+        view=views.GroupDetailView.as_view(),
+        name='Group_detail',
+    ),
+    url(
+        regex="^Group/(?P<pk>\d+)/~update/$",
+        view=views.GroupUpdateView.as_view(),
+        name='Group_update',
+    ),
+    url(
+        regex="^Group/$",
+        view=views.GroupListView.as_view(),
+        name='Group_list',
+    ),
+	]
