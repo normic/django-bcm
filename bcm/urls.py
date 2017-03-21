@@ -55,29 +55,4 @@ urlpatterns = [
         view=views.PersonListView.as_view(),
         name='Person_list',
     ),
-	url(
-        regex="^Group/~create/$",
-        view=views.GroupCreateView.as_view(),
-        name='Group_create',
-    ),
-    url(
-        regex="^Group/(?P<pk>\d+)/~delete/$",
-        view=views.GroupDeleteView.as_view(),
-        name='Group_delete',
-    ),
-    url(
-        regex="^Group/(?P<pk>\d+)/$",
-        view=views.GroupDetailView.as_view(),
-        name='Group_detail',
-    ),
-    url(
-        regex="^Group/(?P<pk>\d+)/~update/$",
-        view=views.GroupUpdateView.as_view(),
-        name='Group_update',
-    ),
-    url(
-        regex="^Group/$",
-        view=views.GroupListView.as_view(),
-        name='Group_list',
-    ),
 	]

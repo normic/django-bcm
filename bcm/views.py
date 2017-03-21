@@ -10,7 +10,6 @@ from django.views.generic import (
 from .models import (
 	Company,
 	Person,
-	Group,
 )
 
 
@@ -62,29 +61,3 @@ class PersonUpdateView(UpdateView):
 class PersonListView(ListView):
 
     model = Person
-
-
-class GroupCreateView(CreateView):
-
-    model = Group
-
-
-class GroupDeleteView(DeleteView):
-
-    model = Group
-
-
-class GroupDetailView(DetailView):
-
-    model = Group
-
-
-class GroupUpdateView(UpdateView):
-
-    model = Group
-
-
-class GroupListView(ListView):
-
-    model = Group
-

@@ -13,13 +13,14 @@ from django.test import TestCase
 from bcm import models
 
 
-class TestBcm(TestCase):
+class TestCompany(TestCase):
 
     def setUp(self):
         pass
 
-    def test_something(self):
-        pass
+    def test_string_representation(self):
+        company = models.Company(companyname="Test AG")
+        self.assertEqual(str(company), company.companyname)
 
     def tearDown(self):
         pass
